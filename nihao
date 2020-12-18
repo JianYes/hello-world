@@ -1,2 +1,11 @@
 file.create('.nojekyll')
 git add .nojekyll
+sum(1, 2, 3)
+mean(1, 2, 3)
+dat1 <- data.frame(c(1, 2, 3), c(4, 5, 6))
+plot(dat1)
+if(!file.exists("organisms.txt")) {
+  txt = getURL("http://rest.kegg.jp/list/organism")
+  write(txt,"organisms.txt")
+}
+organisms <- read.delim("organisms.txt", header=FALSE,sep="\t")
